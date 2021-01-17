@@ -1,0 +1,116 @@
+@media (max-width: 1300px) {
+  .baner__content-title {
+    font-size: 132px;
+    max-width: 370px;
+    margin-left: 105px;
+  }
+}
+@media (max-width: 1000px) {
+  .baner__content-title {
+    font-size: 82px;
+    max-width: 250px;
+    margin-left: 50px;
+    position: absolute;
+    top: 50%;
+    left: calc(15% + 10px);
+    letter-spacing: 0.1em;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (max-width: 800px) {
+  .baner__content-title {
+    font-size: 65px;
+    max-width: 200px;
+  }
+  .baner__content-slogan {
+    font-size: 19px;
+  }
+}
+@media (max-width: 700px) {
+  .baner {
+    background-position: 67% 50%;
+  }
+  .baner__content-title {
+    top: 20%;
+    font-size: 65px;
+    max-width: 210px;
+  }
+  .baner__content-slogan {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+  }
+  .header__menu-item a {
+    font-size: 12px;
+  }
+  .header__menu-list li + li {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 570px) {
+  .baner__content-title {
+    font-size: 55px;
+    max-width: 170px;
+    margin-left: 30px;
+  }
+  .baner__content::after,
+  .baner__content::before {
+    width: calc(50% - 125px);
+  }
+}
+@media (max-width: 490px) {
+  .header__menu {
+    &-wrapper {
+      position: absolute;
+      left: 50%;
+      display: none;
+      transform: translateX(-50%);
+      width: 88%;
+      z-index: 1;
+    }
+    &-list {
+      flex-direction: column;
+      padding: 20px 0;
+      background-color: rgba($color: #242323, $alpha: 0.98);
+      li {
+        & + li {
+          margin-left: 0;
+        }
+      }
+    }
+    &-item {
+      width: 100%;
+      text-align: center;
+      a {
+        width: 100%;
+      }
+    }
+  }
+  .header__controls {
+    display: flex;
+  }
+  .baner__inner{
+    padding: 0 10px;
+  }
+  .baner__content{
+    min-height: 665px;
+  }
+  .baner__content-slogan{
+      font-size: 13px;
+  }
+  .baner__content-title {
+    font-size: 34px;
+    max-width: unset;
+    margin-left: unset;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+
+@media (min-width: 491px) {
+  .header__menu-wrapper {
+    display: block !important;
+  }
+}

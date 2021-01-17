@@ -3,21 +3,26 @@
 @import "global";
 @import "fonts";
 
-
 .header {
+  position: relative;
   &__menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-bottom: 1px solid #d0d4d8;
+    padding: 10px 0;
+    &-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      li + li {
+        margin-left: 35px;
+      }
+    }
     &-item {
       a {
         font-size: 14px;
-        line-height: 19px;
+        line-height: 50px;
         font-family: "Lato-bold", sans-serif;
         font-weight: bold;
         color: $menu;
-        padding: 16px 0;
       }
       .active {
         color: $tc-1;
@@ -29,15 +34,78 @@
           height: 4px;
           background-color: $tc-2;
           bottom: 0;
-          left: 0;
-          animation: menuAnimate 0.3s;
-          animation-timing-function: ease;
+          left: 50%;
+          transform: translateX(-50%);
+          animation: menuAnimate 0.45s;
+          animation-timing-function: linear;
         }
       }
     }
   }
-  li + li {
-    margin-left: 35px;
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 29px;
+    display: none;
+    &-btn {
+      width: 70px;
+      height: 30px;
+      border-radius: 2px;
+      background-color: #706f6c;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        width: 10px;
+        height: 2px;
+        background-color: #e9ecf0;
+        border-radius: 2px;
+        & + span {
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+  
+}
+.header__list {
+  display: flex;
+  width: 50%;
+    justify-content: space-between;
+    align-items: center;
+  &-item {
+    a {
+      position: relative;
+      display: flex;
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+  &-facebook{
+    svg{
+      path{
+        fill: rgba(78, 78, 235, 0.952);
+      }
+    }
+  }
+  &-instagram{
+    svg{
+      path{
+        fill: rgba(252, 4, 46, 0.952)
+      }
+    }
+  }
+  &-youtube{
+    svg{
+      path{
+        fill: rgba(126, 28, 28, 0.952)
+      }
+    }
   }
 }
 
@@ -231,7 +299,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    
+
     &::before {
       content: "";
       position: absolute;
@@ -248,21 +316,21 @@
   &__dot {
     position: absolute;
     transform: translate(-50%, -50%);
-    
+
     width: 0;
     height: 0;
     border-radius: 50%;
-    background-color: rgba(140, 0, 26, .75);
-    &::before{
-        content: '';
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color:rgba(140, 0, 26, 1);
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    background-color: rgba(140, 0, 26, 0.75);
+    &::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgba(140, 0, 26, 1);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
   &__line {
@@ -283,9 +351,8 @@
       width: min-content;
       opacity: 0;
     }
-    #line-text-2{
-        right: -25px;
-        
+    #line-text-2 {
+      right: -25px;
     }
     #line-text-3 {
       transform: translateY(-100%) rotateY(180deg);
@@ -313,7 +380,7 @@
       }
     }
   }
-  #dot-1{
+  #dot-1 {
     top: 56%;
     left: 50%;
   }
@@ -334,7 +401,6 @@
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
-
 
 .photos {
   margin-bottom: 122px;
@@ -414,103 +480,98 @@
   }
 }
 
-
-.footer{
-    background-color: $tc-2;
-    color: $white;
-    padding: 52px 0 85px;
-    &__inner{
-        display: flex;
-        justify-content: space-between;
+.footer {
+  background-color: $tc-2;
+  color: $white;
+  padding: 52px 0 85px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    &-title {
+      font-family: "Lato-Bold", sans-serif;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 20px;
+      margin-bottom: 17px;
     }
-    &__item{
-        &-title{
-            font-family: 'Lato-Bold', sans-serif;
-            font-weight: bold;
-            font-size: 15px;
-            line-height: 20px;
-            margin-bottom: 17px;
+    &-list {
+      li {
+        & + li {
+          margin-top: 6px;
         }
-        &-list{
-            li{
-                &+li{
-                    margin-top: 6px;
-                }
-                display: block;
-                a{
-                    font-family: 'Lato-Regular', sans-serif;
-                    font-weight: normal;
-                    font-size: 14px;
-                    line-height: 19px;
-                    padding: 5px 0;
-                    position: relative;
-                    &:hover{
-                        &::after{
-                        content: '';
-                        position: absolute;
-                        width: 100%;
-                        height: 1px;
-                        background-color: $white;
-                        bottom: 6px;
-                        left: 0;
-                        animation: menuAnimate;
-                        animation-timing-function: linear;
-                        animation-duration: .3s;
-                    }
-                    }
-                }
-                
-                
+        display: block;
+        a {
+          font-family: "Lato-Regular", sans-serif;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 19px;
+          padding: 5px 0;
+          position: relative;
+          &:hover {
+            &::after {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 1px;
+              background-color: $white;
+              bottom: 6px;
+              left: 0;
+              animation: menuAnimate;
+              animation-timing-function: linear;
+              animation-duration: 0.3s;
             }
+          }
         }
+      }
     }
-    &__social{
-        li{
-            position: relative;
-            padding-left: 29px;
-            &::before{
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                background-repeat: no-repeat;
-                background-position: center;
-                width: 17px;
-                height: 17px;
-            }
-        }
-        &-chat{
-            &::before{
-                background-image: url(../images/icons/shape.svg);
-            }
-        }
-
-        &-facebook{
-            &::before{
-                background-image: url(../images/icons/facebook.svg);
-            }
-        }
-
-        &-instagram{
-            &::before{
-                background-image: url(../images/icons/instagram.svg);
-            }
-        }
-
-        &-youtube{
-            &::before{
-                background-image: url(../images/icons/youtube.svg);
-            }
-        }
-
-        &-mail{
-            &::before{
-                background-image: url(../images/icons/email.svg);
-            }
-        }
-
-
+  }
+  &__social {
+    li {
+      position: relative;
+      padding-left: 29px;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 17px;
+        height: 17px;
+      }
     }
+    &-chat {
+      &::before {
+        background-image: url(../images/icons/shape.svg);
+      }
+    }
+
+    &-facebook {
+      &::before {
+        background-image: url(../images/icons/facebook.svg);
+      }
+    }
+
+    &-instagram {
+      &::before {
+        background-image: url(../images/icons/instagram.svg);
+      }
+    }
+
+    &-youtube {
+      &::before {
+        background-image: url(../images/icons/youtube.svg);
+      }
+    }
+
+    &-mail {
+      &::before {
+        background-image: url(../images/icons/email.svg);
+      }
+    }
+  }
 }
 @import "media";

@@ -1,9 +1,14 @@
 $(function () {
-  $(".header__menu-link").on("click", function () {
+  $(".header__menu-link").on("click", function (e) {
+    e.preventDefault;
     $(".header__menu").find(".active").removeClass("active");
     $(this).addClass("active");
   });
   
+  $('.header__controls-btn').on('click', function(){
+    $('.header__menu-wrapper').slideToggle();
+  })
+
   $(window).scroll(function () {
     if ($(this).scrollTop() > 2700) {
       // создаем эффекты и анимацию
