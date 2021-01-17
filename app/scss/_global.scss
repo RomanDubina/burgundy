@@ -10,6 +10,7 @@ html {
 a {
   text-decoration: none;
   display: inline-block;
+  color: $white;
 }
 li {
   display: inline-block;
@@ -26,7 +27,8 @@ body {
   font-size: 15px;
   line-height: 24px;
 }
-.container-firstscreen {
+.container-firstscreen,
+.footer {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
@@ -37,11 +39,4 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
-@keyframes menuAnimate{
-  from{
-    width: 0;;
-  }
-  to{
-    width: 100%;
-  }
-}
+
