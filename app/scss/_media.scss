@@ -17,6 +17,39 @@
     transform: translate(-50%, -50%);
   }
 }
+@media (max-width: 900px) {
+  .first-section__title,
+  .about__title,
+  .photos__title {
+    font-size: 28px;
+    padding: 0 15px;
+  }
+  .first-section__content,
+  .about__content,
+  .photos__text {
+    padding: 0 60px;
+  }
+  .first-section__content-text,
+  .about__content-text,
+  .photos__text {
+    font-size: 14px;
+    max-width: unset;
+  }
+}
+
+@media (max-width: 850px) {
+  .photos-slider {
+    &__slick {
+      .slick-track .slick-slide {
+        div {
+          padding: 20px;
+          margin: 0 30px;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 800px) {
   .baner__content-title {
     font-size: 65px;
@@ -24,6 +57,68 @@
   }
   .baner__content-slogan {
     font-size: 19px;
+  }
+  .first-section__inner,
+  .about__inner,
+  .photos__inner {
+    flex-direction: column;
+  }
+  .first-section__title,
+  .about__title,
+  .photos__title,
+  .photos__text {
+    padding: 0 70px;
+    max-width: unset;
+    margin-bottom: 30px;
+  }
+  .first-section__content-text,
+  .about__content-title {
+    max-width: unset;
+    width: 100%;
+  }
+  .route,
+  .gastronomy {
+    &__inner {
+      flex-direction: column;
+    }
+    &__content {
+      max-width: 538px;
+      margin-bottom: 20px;
+    }
+  }
+  .gastronomy {
+    &__inner {
+      flex-direction: column-reverse;
+    }
+    &__content{
+      text-align: left;
+    }
+  }
+  .bottle__img {
+    &-wrapper {
+      img {
+        width: 80%;
+      }
+    }
+    &-pointer {
+      &#dl-1 {
+        top: calc(50% + 23px);
+        height: 50px;
+      }
+      &#dl-2 {
+        left: calc(50% + 135px);
+        top: calc(50% + 135px);
+        height: 35px;
+      }
+      &#dl-3 {
+        left: calc(50% - 125px);
+        height: 25px;
+      }
+      .dotline__dot-minidot {
+        width: 7px;
+        height: 7px;
+      }
+    }
   }
 }
 @media (max-width: 700px) {
@@ -46,6 +141,23 @@
   .header__menu-list li + li {
     margin-left: 15px;
   }
+  .summary {
+    padding: 75px 50px;
+  }
+  .summary__item-counter {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .summary__item-name {
+    font-size: 14px;
+  }
+  .summary__item-img {
+    margin-bottom: 15px;
+    object {
+      width: 45px;
+      height: 45px;
+    }
+  }
 }
 
 @media (max-width: 570px) {
@@ -58,7 +170,65 @@
   .baner__content::before {
     width: calc(50% - 125px);
   }
+  .first-section__title,
+  .first-section__content,
+  .about__title,
+  .about__content,
+  .photos__title,
+  .photos__text {
+    padding: 0 20px;
+  }
+  .route__img,
+  .gastronomy__img {
+    img {
+      width: 100%;
+    }
+  }
+  .route__content,
+  .gastronomy__content,
+  .photos__title,
+  .photos__text {
+    text-align: center;
+  }
+  .route__content-title,
+  .gastronomy__content-title,
+  .photos__title {
+    font-size: 19px;
+    line-height: 22px;
+  }
+  .route__content-text,
+  .gastronomy__content-text,
+  .photos__text {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
+
+@media (max-width: 520px) {
+  .bottle__img {
+    .dotline {
+      &__text {
+        font-size: 11px;
+      }
+      &#dl-1 {
+        width: 95px;
+        left: calc(50% + 45px);
+      }
+      &#dl-2 {
+        width: 120px;
+        left: calc(50% + 104px);
+      }
+      &#dl-3 {
+        width: 80px;
+        left: calc(50% - 86px);
+        .dotline__text {
+          left: calc(50% - 20px);
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 490px) {
   .header__menu {
     &-wrapper {
@@ -90,14 +260,14 @@
   .header__controls {
     display: flex;
   }
-  .baner__inner{
+  .baner__inner {
     padding: 0 10px;
   }
-  .baner__content{
+  .baner__content {
     min-height: 665px;
   }
-  .baner__content-slogan{
-      font-size: 13px;
+  .baner__content-slogan {
+    font-size: 13px;
   }
   .baner__content-title {
     font-size: 34px;
@@ -106,6 +276,91 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+  }
+  .first-section__title,
+  .about__title {
+    font-size: 20px;
+    text-align: center;
+    line-height: 28px;
+  }
+  .first-section__content-text,
+  .about__content-text {
+    font-size: 12px;
+    text-align: center;
+    line-height: 18px;
+  }
+  .first-section__title,
+  .first-section__content,
+  .about__title,
+  .about__content {
+    padding: 0 10px;
+  }
+  .summary {
+    padding: 45px 15px;
+    &__inner {
+      flex-wrap: wrap;
+    }
+    &__item {
+      width: 50%;
+      &:nth-child(3),
+      &:nth-child(4) {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .bottle__img {
+    .dotline {
+      &__line-top {
+        height: 1px;
+      }
+      &__line-left,
+      &__line-right {
+        width: 1px;
+      }
+      &__dot {
+        &-minidot {
+          width: 3px;
+          height: 3px;
+        }
+      }
+
+      &__text {
+        font-size: 11px;
+      }
+      &#dl-1 {
+        width: 95px;
+        left: calc(50% + 45px);
+      }
+      &#dl-2 {
+        transform: skewX(-32deg) translate(-50%, -50%);
+        left: calc(50% + 75px);
+        top: calc(50% + 105px);
+        width: 100px;
+        .dotline__dot {
+          transform: translate(-50%, 50%) skewX(32deg);
+        }
+        .dotline__text {
+          transform: translateY(-100%) skewX(32deg);
+        }
+      }
+      &#dl-3 {
+        width: 80px;
+        left: calc(50% - 65px);
+        top: calc(50% + 180px);
+        .dotline__text {
+          left: calc(50% - 20px);
+        }
+      }
+    }
+
+    &-wrapper {
+      img {
+        width: 65%;
+      }
+    }
   }
 }
 
