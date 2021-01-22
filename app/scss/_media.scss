@@ -16,6 +16,22 @@
     letter-spacing: 0.1em;
     transform: translate(-50%, -50%);
   }
+
+  .footer__item {
+    &-title {
+      font-size: 13px;
+      line-height: 17px;
+    }
+    &-list {
+      li {
+        a {
+          font-size: 12px;
+          line-height: 16px;
+          padding: 3px 0;
+        }
+      }
+    }
+  }
 }
 @media (max-width: 900px) {
   .first-section__title,
@@ -90,7 +106,7 @@
     &__inner {
       flex-direction: column-reverse;
     }
-    &__content{
+    &__content {
       text-align: left;
     }
   }
@@ -156,6 +172,48 @@
     object {
       width: 45px;
       height: 45px;
+    }
+  }
+  .footer__item {
+    &-title {
+      font-size: 11px;
+      line-height: 15px;
+    }
+    &-list {
+      li {
+        a {
+          font-size: 10px;
+          line-height: 14px;
+          padding: 2px 0;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .footer {
+    &__inner {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 30px;
+    }
+    &__item {
+      width: 50%;
+      margin-bottom: 30px;
+      &-title {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      &-list {
+        li {
+          a {
+            font-size: 14px;
+            line-height: 19px;
+            padding: 4px 0;
+          }
+        }
+      }
     }
   }
 }
@@ -308,6 +366,30 @@
       }
     }
   }
+
+  .footer {
+    &__inner {
+      padding: 0 15px;
+    }
+    &__item {
+      width: 50%;
+      margin-bottom: 30px;
+      &-title {
+        font-size: 13px;
+        line-height: 18px;
+      }
+
+      &-list {
+        li {
+          a {
+            font-size: 12px;
+            line-height: 17px;
+            padding: 3px 0;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 400px) {
@@ -359,6 +441,60 @@
     &-wrapper {
       img {
         width: 65%;
+      }
+    }
+  }
+
+  .footer {
+    &__inner {
+      padding: 0 10px;
+    }
+    &__item {
+      width: 50%;
+      margin-bottom: 30px;
+      &-title {
+        font-size: 12px;
+        line-height: 17px;
+      }
+
+      &-list {
+        li {
+          a {
+            font-size: 11px;
+            line-height: 16px;
+            padding: 2px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .footer {
+    &__inner {
+      flex-direction: column;
+      padding: unset;
+      padding-left: calc(50% - 120px);
+    }
+    &__item {
+      width: 100%;
+      margin-bottom: 30px;
+      &-title {
+        font-size: 17px;
+        line-height: 21px;
+        letter-spacing: .2em;
+      }
+
+      &-list {
+        li {
+          a {
+            font-size: 15px;
+            line-height: 19px;
+            letter-spacing: .2em;
+            padding: 4px 0;
+          }
+        }
       }
     }
   }

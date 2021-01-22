@@ -36,7 +36,7 @@
           bottom: 0;
           left: 50%;
           transform: translateX(-50%);
-          animation: menuAnimate 0.45s;
+          animation: menuAnimate 0.18s;
           animation-timing-function: linear;
         }
       }
@@ -523,6 +523,8 @@
     justify-content: space-between;
   }
   &__item {
+    padding: 0 15px;
+
     &-title {
       font-family: "Lato-Bold", sans-serif;
       font-weight: bold;
