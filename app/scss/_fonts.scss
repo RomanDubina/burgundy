@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'Georgia';
+    src: url('../fonts/Georgia.eot');
+    src: local('Georgia'),
+        url('Georgia.eot?#iefix') format('embedded-opentype'),
+        url('Georgia.woff2') format('woff2'),
+        url('Georgia.woff') format('woff'),
+        url('Georgia.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Georgia';
+    src: url('../fonts/Georgia-Bold.eot');
+    src: local('Georgia Bold'), local('Georgia-Bold'),
+        url('Georgia-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Georgia-Bold.woff2') format('woff2'),
+        url('Georgia-Bold.woff') format('woff'),
+        url('Georgia-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Lato-Regular', sans-serif;
+    src: url(../fonts/Lato-Regular.ttf) format(ttf);
+    font-display: swap;
+    font-weight: normal;
+}
+@font-face{
+    font-family: 'Lato-Bold', sans-serif;
+    src: url(../fonts/Lato-Bold.ttf) format(ttf);
+    font-display: swap;
+    font-weight: bold;
+}

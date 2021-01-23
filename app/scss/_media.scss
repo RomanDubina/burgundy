@@ -1,0 +1,490 @@
+@media (max-width: 1300px) {
+  .baner__content-title {
+    font-size: 132px;
+    max-width: 370px;
+    margin-left: 105px;
+  }
+}
+@media (max-width: 1000px) {
+  .baner__content-title {
+    font-size: 82px;
+    max-width: 250px;
+    margin-left: 50px;
+    position: absolute;
+    top: 50%;
+    left: calc(15% + 10px);
+    letter-spacing: 0.1em;
+    transform: translate(-50%, -50%);
+  }
+
+  .footer__item {
+    &-title {
+      font-size: 13px;
+      line-height: 17px;
+    }
+    &-list {
+      li {
+        a {
+          font-size: 12px;
+          line-height: 16px;
+          padding: 3px 0;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 900px) {
+  .first-section,
+  .about,
+  .photos {
+    &__title {
+      font-size: 25px;
+      line-height: 31px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .photos-slider {
+    &__slick {
+      .slick-track .slick-slide {
+        div {
+          padding: 20px;
+          margin: 0 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .baner__content-title {
+    font-size: 65px;
+    max-width: 200px;
+  }
+  .baner__content-slogan {
+    font-size: 19px;
+  }
+
+  .bottle__img {
+    &-wrapper {
+      img {
+        width: 80%;
+      }
+    }
+    &-pointer {
+      &#dl-1 {
+        top: calc(50% + 23px);
+        height: 50px;
+      }
+      &#dl-2 {
+        left: calc(50% + 135px);
+        top: calc(50% + 135px);
+        height: 35px;
+      }
+      &#dl-3 {
+        left: calc(50% - 125px);
+        height: 25px;
+      }
+      .dotline__dot-minidot {
+        width: 7px;
+        height: 7px;
+      }
+    }
+  }
+
+  .route,
+  .gastronomy {
+    &__inner {
+      flex-direction: column;
+    }
+    &__content {
+      max-width: unset;
+      margin-bottom: 20px;
+      padding: 0 10px 0 20px;
+    }
+  }
+  .gastronomy {
+    &__inner {
+      flex-direction: column-reverse;
+    }
+    &__content {
+      text-align: unset;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .baner {
+    background-position: 67% 50%;
+  }
+  .baner__content-title {
+    top: 20%;
+    font-size: 65px;
+    max-width: 210px;
+  }
+  .baner__content-slogan {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+  }
+  .header__menu-item a {
+    font-size: 12px;
+  }
+  .header__menu-list li + li {
+    margin-left: 15px;
+  }
+  .summary {
+    padding: 75px 50px;
+  }
+  .summary__item-counter {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .summary__item-name {
+    font-size: 14px;
+  }
+  .summary__item-img {
+    margin-bottom: 15px;
+    object {
+      width: 45px;
+      height: 45px;
+    }
+  }
+  .photos {
+    margin-bottom: 40px;
+  }
+  .footer__item {
+    &-title {
+      font-size: 11px;
+      line-height: 15px;
+    }
+    &-list {
+      li {
+        a {
+          font-size: 10px;
+          line-height: 14px;
+          padding: 2px 0;
+        }
+      }
+    }
+  }
+  .first-section,
+  .about,
+  .photos {
+    &__inner {
+      flex-direction: column;
+    }
+    &__title {
+      padding: 0 20px;
+      margin-bottom: 30px;
+      max-width: unset;
+    }
+  }
+
+  .photos-slider{
+    &__slick{
+      .slick-arrow{
+        top: 100%;
+        &.slick-prev{
+          left: 40%;
+          
+         }
+        &.slick-next{
+          left: 60%
+          
+          
+          }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .footer {
+    &__inner {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 30px;
+    }
+    &__item {
+      width: 50%;
+      margin-bottom: 30px;
+      &-title {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      &-list {
+        li {
+          a {
+            font-size: 14px;
+            line-height: 19px;
+            padding: 4px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .baner__content-title {
+    font-size: 55px;
+    max-width: 170px;
+    margin-left: 30px;
+  }
+  .baner__content::after,
+  .baner__content::before {
+    width: calc(50% - 125px);
+  }
+
+  .route__img,
+  .gastronomy__img {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .bottle__img {
+    .dotline {
+      &__text {
+        font-size: 11px;
+      }
+      &#dl-1 {
+        width: 95px;
+        left: calc(50% + 45px);
+      }
+      &#dl-2 {
+        width: 120px;
+        left: calc(50% + 104px);
+      }
+      &#dl-3 {
+        width: 80px;
+        left: calc(50% - 86px);
+        .dotline__text {
+          left: calc(50% - 20px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .header__menu {
+    &-wrapper {
+      position: absolute;
+      left: 50%;
+      display: none;
+      transform: translateX(-50%);
+      width: 88%;
+      z-index: 1;
+    }
+    &-list {
+      flex-direction: column;
+      padding: 20px 0;
+      background-color: rgba($color: #242323, $alpha: 0.98);
+      li {
+        & + li {
+          margin-left: 0;
+        }
+      }
+    }
+    &-item {
+      width: 100%;
+      text-align: center;
+      a {
+        width: 100%;
+      }
+    }
+  }
+  .header__controls {
+    display: flex;
+  }
+  .baner__inner {
+    padding: 0 10px;
+  }
+  .baner__content {
+    min-height: 665px;
+  }
+  .baner__content-slogan {
+    font-size: 13px;
+  }
+  .baner__content-title {
+    font-size: 34px;
+    max-width: unset;
+    margin-left: unset;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .summary {
+    padding: 45px 15px;
+    &__inner {
+      flex-wrap: wrap;
+    }
+    &__item {
+      width: 50%;
+      &:nth-child(3),
+      &:nth-child(4) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .footer {
+    &__inner {
+      padding: 0 15px;
+    }
+    &__item {
+      width: 50%;
+      margin-bottom: 30px;
+      &-title {
+        font-size: 13px;
+        line-height: 18px;
+      }
+
+      &-list {
+        li {
+          a {
+            font-size: 12px;
+            line-height: 17px;
+            padding: 3px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .bottle__img {
+    .dotline {
+      &__line-top {
+        height: 1px;
+      }
+      &__line-left,
+      &__line-right {
+        width: 1px;
+      }
+      &__dot {
+        &-minidot {
+          width: 3px;
+          height: 3px;
+        }
+      }
+
+      &__text {
+        font-size: 11px;
+      }
+      &#dl-1 {
+        width: 95px;
+        left: calc(50% + 45px);
+      }
+      &#dl-2 {
+        transform: skewX(-32deg) translate(-50%, -50%);
+        left: calc(50% + 75px);
+        top: calc(50% + 105px);
+        width: 100px;
+        .dotline__dot {
+          transform: translate(-50%, 50%) skewX(32deg);
+        }
+        .dotline__text {
+          transform: translateY(-100%) skewX(32deg);
+        }
+      }
+      &#dl-3 {
+        width: 80px;
+        left: calc(50% - 65px);
+        top: calc(50% + 180px);
+        .dotline__text {
+          left: calc(50% - 20px);
+        }
+      }
+    }
+
+    &-wrapper {
+      img {
+        width: 65%;
+      }
+    }
+  }
+  .photos {
+    margin-bottom: unset;
+  }
+  .footer {
+    &__inner {
+      padding: 0 10px;
+    }
+    &__item {
+      width: 50%;
+      margin-bottom: 30px;
+      &-title {
+        font-size: 12px;
+        line-height: 17px;
+      }
+
+      &-list {
+        li {
+          a {
+            font-size: 11px;
+            line-height: 16px;
+            padding: 2px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .route,
+  .gastronomy,
+  .first-section,
+  .about,
+  .photos {
+    &__content,
+    &__content-text,
+    &__content-link,
+    &__title,
+    &__text {
+      padding: unset;
+    }
+  }
+
+  .footer {
+    &__inner {
+      flex-direction: column;
+      padding: unset;
+      padding-left: calc(50% - 120px);
+    }
+    &__item {
+      width: 100%;
+      margin-bottom: 30px;
+      &-title {
+        font-size: 17px;
+        line-height: 21px;
+        letter-spacing: 0.2em;
+      }
+
+      &-list {
+        li {
+          a {
+            font-size: 15px;
+            line-height: 19px;
+            letter-spacing: 0.2em;
+            padding: 4px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 491px) {
+  .header__menu-wrapper {
+    display: block !important;
+  }
+}
