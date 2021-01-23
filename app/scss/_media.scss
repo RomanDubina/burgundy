@@ -34,22 +34,13 @@
   }
 }
 @media (max-width: 900px) {
-  .first-section__title,
-  .about__title,
-  .photos__title {
-    font-size: 28px;
-    padding: 0 15px;
-  }
-  .first-section__content,
-  .about__content,
-  .photos__text {
-    padding: 0 60px;
-  }
-  .first-section__content-text,
-  .about__content-text,
-  .photos__text {
-    font-size: 14px;
-    max-width: unset;
+  .first-section,
+  .about,
+  .photos {
+    &__title {
+      font-size: 25px;
+      line-height: 31px;
+    }
   }
 }
 
@@ -74,42 +65,7 @@
   .baner__content-slogan {
     font-size: 19px;
   }
-  .first-section__inner,
-  .about__inner,
-  .photos__inner {
-    flex-direction: column;
-  }
-  .first-section__title,
-  .about__title,
-  .photos__title,
-  .photos__text {
-    padding: 0 70px;
-    max-width: unset;
-    margin-bottom: 30px;
-  }
-  .first-section__content-text,
-  .about__content-title {
-    max-width: unset;
-    width: 100%;
-  }
-  .route,
-  .gastronomy {
-    &__inner {
-      flex-direction: column;
-    }
-    &__content {
-      max-width: 538px;
-      margin-bottom: 20px;
-    }
-  }
-  .gastronomy {
-    &__inner {
-      flex-direction: column-reverse;
-    }
-    &__content {
-      text-align: left;
-    }
-  }
+
   .bottle__img {
     &-wrapper {
       img {
@@ -136,7 +92,28 @@
       }
     }
   }
+
+  .route,
+  .gastronomy {
+    &__inner {
+      flex-direction: column;
+    }
+    &__content {
+      max-width: unset;
+      margin-bottom: 20px;
+      padding: 0 10px 0 20px;
+    }
+  }
+  .gastronomy {
+    &__inner {
+      flex-direction: column-reverse;
+    }
+    &__content {
+      text-align: unset;
+    }
+  }
 }
+
 @media (max-width: 700px) {
   .baner {
     background-position: 67% 50%;
@@ -174,6 +151,9 @@
       height: 45px;
     }
   }
+  .photos {
+    margin-bottom: 40px;
+  }
   .footer__item {
     &-title {
       font-size: 11px;
@@ -186,6 +166,35 @@
           line-height: 14px;
           padding: 2px 0;
         }
+      }
+    }
+  }
+  .first-section,
+  .about,
+  .photos {
+    &__inner {
+      flex-direction: column;
+    }
+    &__title {
+      padding: 0 20px;
+      margin-bottom: 30px;
+      max-width: unset;
+    }
+  }
+
+  .photos-slider{
+    &__slick{
+      .slick-arrow{
+        top: 100%;
+        &.slick-prev{
+          left: 40%;
+          
+         }
+        &.slick-next{
+          left: 60%
+          
+          
+          }
       }
     }
   }
@@ -228,37 +237,12 @@
   .baner__content::before {
     width: calc(50% - 125px);
   }
-  .first-section__title,
-  .first-section__content,
-  .about__title,
-  .about__content,
-  .photos__title,
-  .photos__text {
-    padding: 0 20px;
-  }
+
   .route__img,
   .gastronomy__img {
     img {
       width: 100%;
     }
-  }
-  .route__content,
-  .gastronomy__content,
-  .photos__title,
-  .photos__text {
-    text-align: center;
-  }
-  .route__content-title,
-  .gastronomy__content-title,
-  .photos__title {
-    font-size: 19px;
-    line-height: 22px;
-  }
-  .route__content-text,
-  .gastronomy__content-text,
-  .photos__text {
-    font-size: 14px;
-    line-height: 18px;
   }
 }
 
@@ -335,24 +319,7 @@
     transform: translate(-50%, -50%);
     text-align: center;
   }
-  .first-section__title,
-  .about__title {
-    font-size: 20px;
-    text-align: center;
-    line-height: 28px;
-  }
-  .first-section__content-text,
-  .about__content-text {
-    font-size: 12px;
-    text-align: center;
-    line-height: 18px;
-  }
-  .first-section__title,
-  .first-section__content,
-  .about__title,
-  .about__content {
-    padding: 0 10px;
-  }
+
   .summary {
     padding: 45px 15px;
     &__inner {
@@ -444,7 +411,9 @@
       }
     }
   }
-
+  .photos {
+    margin-bottom: unset;
+  }
   .footer {
     &__inner {
       padding: 0 10px;
@@ -471,6 +440,20 @@
 }
 
 @media (max-width: 350px) {
+  .route,
+  .gastronomy,
+  .first-section,
+  .about,
+  .photos {
+    &__content,
+    &__content-text,
+    &__content-link,
+    &__title,
+    &__text {
+      padding: unset;
+    }
+  }
+
   .footer {
     &__inner {
       flex-direction: column;
@@ -483,7 +466,7 @@
       &-title {
         font-size: 17px;
         line-height: 21px;
-        letter-spacing: .2em;
+        letter-spacing: 0.2em;
       }
 
       &-list {
@@ -491,7 +474,7 @@
           a {
             font-size: 15px;
             line-height: 19px;
-            letter-spacing: .2em;
+            letter-spacing: 0.2em;
             padding: 4px 0;
           }
         }

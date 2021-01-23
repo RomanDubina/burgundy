@@ -39,7 +39,6 @@ function images() {
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
-        // сюда можно скачивать и подключать доп библиотеки JS & jQuery с NPM
         'node_modules/slick-carousel/slick/slick.js',
         'node_modules/typeit/dist/typeit.min.js',
         'node_modules/wow.js/dist/wow.js',
@@ -62,7 +61,7 @@ function styles() {
         
         'app/scss/style.scss'
     ])
-        .pipe(scss({outputStyle: 'compressed'}))// expanded
+        .pipe(scss({outputStyle: 'compressed'}))
         .pipe(concat('style.min.css'))
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 10 version'],

@@ -15,18 +15,16 @@ $(function () {
         settings: {
           slidesToShow: 1,
           variableWidth: false,
-          // centerMode: false,
-          // centerPadding: '400px',
+          
         },
       },
       {
         breakpoint: 680,
         settings: {
-          // adaptiveHeight: true,
+          
           slidesToShow: 1,
           variableWidth: false,
-          centerPadding: '0',
-          arrows: false
+          centerPadding: '0'
         },
       },
     ],
@@ -75,7 +73,7 @@ $(function () {
   wow = new WOW({
     boxClass: "wow",
     animateClass: "animated",
-    offset: 0,
+    offset: 150,
     mobile: true,
     live: true,
   });
